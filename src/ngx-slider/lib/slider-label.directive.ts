@@ -19,7 +19,8 @@ export class SliderLabelDirective extends SliderElementDirective {
     let recalculateDimension: boolean = false;
 
     if (!this.alwaysHide &&
-        (ValueHelper.isNullOrUndefined(this.value) ||
+        (ValueHelper.isNullOrUndefined(this.value) || 
+         ValueHelper.isNullOrUndefined(value) ||
          this.value.length !== value.length ||
          (this.value.length > 0 && this.dimension === 0))) {
       recalculateDimension = true;
